@@ -14,3 +14,23 @@ First step:
 
 Secret Puns:
 LOLZ = LOLS = Laugh out loud security
+
+1. The Brain — language model
+
+Use an existing open-weight or hosted language model for reasoning, planning, understanding questions, and generating answers. Don't try to train an entire foundation model from scratch as your first step.
+
+2. Long-term memory — MySQL + semantic search
+
+Keep MySQL for structured facts, conversation summaries, tasks, and source records. Add vector search so the AI can retrieve relevant information by meaning, not just exact keywords.
+
+3. The worker — background agents
+
+Run separate jobs for research, summarization, memory updates, and scheduled checks. Use a task queue instead of an uncontrolled infinite loop, with retry limits and resource controls.
+
+4. The learning system — evaluation and improvement
+
+Save feedback and test results. Build curated datasets, evaluate model versions, and fine-tune when justified. New information in a database does not automatically retrain the model or improve its reasoning.
+
+5. The hands — controlled tools
+
+Allow approved actions such as searching the web, editing project files, or running code in a sandbox. Require permission before destructive actions, publishing content, or changing important settings.
